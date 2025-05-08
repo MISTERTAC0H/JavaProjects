@@ -1,6 +1,6 @@
-import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
+import javax.swing.*;
 
 /*
  * calculator app that can handle any length number
@@ -40,7 +40,13 @@ public class Calculator extends JFrame implements ActionListener {
         add(buttonPanel, BorderLayout.CENTER);
         setVisible(true);
     }
-
+    /*
+     * math section
+     * change how numbers are stored from double to a string
+     * parse through strNum1 and strNum2 and add num by num in each string
+     * start at end of string working towards the front 
+     * tempNum = strNum1.getCharAt(strNum1.length-1) + strNum2.getCharAt(strNum2.length-1)
+     */
     public void actionPerformed(ActionEvent e) {
         String input = e.getActionCommand();
 
